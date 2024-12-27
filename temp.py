@@ -33,7 +33,7 @@ def display_k_values(raw_data, combined_df):
         min_value=float(combined_df.filter(like='T_').min().min()),
         max_value=float(combined_df.filter(like='T_').max().max()),
         step=0.1,
-        value=160.0,  # Default value
+        value=300.0,  # Default value
         key="T_t"  # Unique key
     )
 

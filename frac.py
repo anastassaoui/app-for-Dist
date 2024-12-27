@@ -27,7 +27,7 @@ def calculate_fractions(feed_rates, top_rates, bottom_rates):
 
     # ---- DISPLAY FRACTIONS IN MITO ----
     st.subheader("Fractions as Mito Spreadsheet")
-    final_dfs, code = spreadsheet(combined_fractions_df)
+    final_dfs = spreadsheet(combined_fractions_df)
 
     # ---- DOWNLOAD RESULTS ----
     csv = combined_fractions_df.to_csv().encode('utf-8')
@@ -38,4 +38,4 @@ def calculate_fractions(feed_rates, top_rates, bottom_rates):
         mime='text/csv'
     )
 
-    return final_dfs, code
+    return final_dfs
